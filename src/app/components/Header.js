@@ -36,19 +36,19 @@ export default function Header() {
         <div className="w-full md:w-auto flex justify-between md:justify-end items-center gap-4 text-sm flex-wrap">
           <Link href="/" className="flex items-center gap-1 text-gray-700 hover:text-blue-600">
             <MessagesSquare className="w-5 h-5" />
-            <span className="hidden xs:inline">Message</span>
+            <span className="hidden md:inline">Message</span>
           </Link>
           <Link href="/" className="flex items-center gap-1 text-gray-700 hover:text-blue-600">
             <Package className="w-5 h-5" />
-            <span className="hidden xs:inline">Order</span>
+            <span className="hidden md:inline">Order</span>
           </Link>
           <Link href="/Cart" className="flex items-center gap-1 text-gray-700 hover:text-blue-600">
             <ShoppingCart className="w-5 h-5" />
-            <span className="hidden xs:inline">Cart</span>
+            <span className="hidden md:inline">Cart</span>
           </Link>
           <Link href="/account" className="flex items-center gap-1 text-gray-700 hover:text-blue-600">
             <User className="w-5 h-5" />
-            <span className="hidden xs:inline">User</span>
+            <span className="hidden md:inline">User</span>
           </Link>
         </div>
       </div>
