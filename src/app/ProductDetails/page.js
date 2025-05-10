@@ -63,7 +63,7 @@ export default function ProductDetailsPage() {
       image: '/products/laptop.png',
       rating: 4
     },
-      {
+    {
       id: 7,
       title: 'Phone',
       category: 'Smartphones',
@@ -133,7 +133,7 @@ export default function ProductDetailsPage() {
           {/* Main Content */}
           <main className="flex-1">
             {/* View Toggle */}
-            <div className="flex justify-end mb-4">
+            <div className="flex flex-wrap justify-end mb-4 gap-2">
               <button
                 onClick={() => setViewMode("grid")}
                 className={`px-3 py-1 border ${viewMode === "grid" ? 'bg-blue-600 text-white' : 'bg-white'}`}
@@ -149,13 +149,13 @@ export default function ProductDetailsPage() {
             </div>
 
             {/* Product Listing */}
-            <div className={`${viewMode === 'grid' ? 'grid grid-cols-2 md:grid-cols-3 gap-6' : 'space-y-6'}`}>
+            <div className={`${viewMode === 'grid' ? 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-6' : 'space-y-6'}`}>
               {products.map((product, index) => (
-                <div key={product.id} className={`bg-white rounded-xl shadow p-4 transition hover:shadow-lg ${viewMode === 'list' ? 'flex items-center gap-6' : ''}`}>
+                <div key={product.id} className={`bg-white rounded-xl shadow p-4 transition hover:shadow-lg ${viewMode === 'list' ? 'flex flex-col sm:flex-row items-start gap-6' : ''}`}>
                   <img
                     src={product.image}
                     alt={product.title}
-                    className={`${viewMode === 'list' ? 'w-32 h-32' : 'w-full h-40'} object-contain`}
+                    className={`${viewMode === 'list' ? 'w-32 h-32 md:w-40 md:h-40' : 'w-full h-40 md:h-48'} object-contain`}
                   />
 
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
@@ -173,7 +173,7 @@ export default function ProductDetailsPage() {
                     {/* Buy Button */}
                     <Link href={index === 0 ? "/ProductBuy" : "#"}>
                       <button
-                        className="mt-3 w-32 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded text-sm"
+                        className="mt-3 w-full sm:w-32 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded text-sm"
                         disabled={index !== 0} // Disables button for products other than the first one
                       >
                         Buy
