@@ -16,12 +16,12 @@ export default function SupplierByRegion() {
 
   return (
     <section className="bg-gray-100 py-12 px-4">
-      <div className="max-w-[1180px] mx-auto ">
+      <div className="max-w-[1180px] mx-auto">
         <h2 className="text-2xl font-semibold mb-8">Suppliers by Region</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center">
           {suppliers.map((item, idx) => (
             <div key={idx} className="flex items-center gap-2">
-              <img src={item.flag} alt={item.country} className="w-5 h-5 object-contain w-10 h-auto" />
+              <img src={item.flag} alt={item.country} className="w-10 h-auto object-contain" />
               <div>
                 <p className="text-sm font-medium">{item.country}</p>
                 <p className="text-xs text-gray-500">{item.domain}</p>
